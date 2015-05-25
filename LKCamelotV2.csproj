@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC859F0D-86F6-43F2-8013-9B60DFCC3810}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LKCamelotV2</RootNamespace>
+    <AssemblyName>LKCamelotV2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>lib\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AStar\AStar.cs" />
+    <Compile Include="AStar\IAStarNode.cs" />
+    <Compile Include="AStar\NavMesh.cs" />
+    <Compile Include="Board\Message.cs" />
+    <Compile Include="Board\MessageBoard.cs" />
+    <Compile Include="DB\Loader.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Network\GameConnection.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Network\GameMessage.cs" />
+    <Compile Include="Network\GameOutMessage.cs" />
+    <Compile Include="Network\GamePacketBuffer.cs" />
+    <Compile Include="Network\GameProtocol.cs" />
+    <Compile Include="Object\Anvil.cs" />
+    <Compile Include="Object\Attribute.cs" />
+    <Compile Include="Object\Brain.cs" />
+    <Compile Include="Object\Buff.cs" />
+    <Compile Include="Object\Cauldron.cs" />
+    <Compile Include="Object\Consumable.cs" />
+    <Compile Include="Object\Craft.cs" />
+    <Compile Include="Object\Enums.cs" />
+    <Compile Include="Object\Equipment.cs" />
+    <Compile Include="Object\Gold.cs" />
+    <Compile Include="Object\Item.cs" />
+    <Compile Include="Object\Living.cs" />
+    <Compile Include="Object\Mineral.cs" />
+    <Compile Include="Object\Mobile.cs" />
+    <Compile Include="Object\Monster.cs" />
+    <Compile Include="Object\Npc.cs" />
+    <Compile Include="Object\Object.cs" />
+    <Compile Include="Object\Ore.cs" />
+    <Compile Include="Object\Position.cs" />
+    <Compile Include="Object\Recipe.cs" />
+    <Compile Include="Object\Spellbook.cs" />
+    <Compile Include="Player\Bank.cs" />
+    <Compile Include="Player\Enums.cs" />
+    <Compile Include="Player\Identity.cs" />
+    <Compile Include="Player\Inventory.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\Spells.cs" />
+    <Compile Include="Player\State.cs" />
+    <Compile Include="Player\Stats.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Scripts\Chat.cs" />
+    <Compile Include="Scripts\Messages.cs" />
+    <Compile Include="Scripts\RecipeSmith.cs" />
+    <Compile Include="Scripts\Experience.cs" />
+    <Compile Include="Scripts\Items.cs" />
+    <Compile Include="Scripts\Maps.cs" />
+    <Compile Include="Scripts\Minerals.cs" />
+    <Compile Include="Scripts\Monsters.cs" />
+    <Compile Include="Scripts\Npcs.cs" />
+    <Compile Include="Scripts\RecipeMine.cs" />
+    <Compile Include="Scripts\Script.cs" />
+    <Compile Include="Object\Spell.cs" />
+    <Compile Include="Scripts\Spells.cs" />
+    <Compile Include="Util\Dice.cs" />
+    <Compile Include="Util\Point2D.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="World\MapEvents.cs" />
+    <Compile Include="World\Map.cs" />
+    <Compile Include="World\MapObjects.cs" />
+    <Compile Include="World\Portal.cs" />
+    <Compile Include="World\Tile.cs" />
+    <Compile Include="World\World.cs" />
+    <Compile Include="Thixi\BufferManager.cs" />
+    <Compile Include="Thixi\Connection.cs" />
+    <Compile Include="Thixi\Server.cs" />
+    <Compile Include="Thixi\SocketAsyncEventArgsPool.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
