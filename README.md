@@ -1,2 +1,2 @@
 # LKEmuV2
-The Last Kingdom Emulator
+LKEmu is depreciated.  This version is much more maintainable and stable. Most content still needs to be ported over.
